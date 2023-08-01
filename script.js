@@ -47,3 +47,40 @@ const player = (function (mark) {
     }
 
 });
+
+
+const computer = (function (mark) {
+    const { getMark, getPlayingStatus, noLongerPlaying, playing } = new player(mark);
+
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * max);
+    }
+
+    function move(gameBoardSection) {
+
+        if (getPlayingStatus()) {
+
+            let i = getRandomInt(9);
+
+            if (gameBoardSection.children[i].textContent == "") {
+
+                gameBoardSection.children[i].textContent = getMark();
+                let classChars = gameBoardSection.children[i].className.split(" ");
+                let row = parseInt(classChars[1]);
+                let column = parseInt(classChars[3]);
+
+
+                gameBoard.getGameBoard()[row][column] = getMark();
+
+
+            } else {
+                i = getRandomInt(9);
+                move(gameBoardSection);
+            }
+
+
+        }
+    }
+    return { getMark, getPlayingStatus, move, playing, noLongerPlaying };
+});
+
