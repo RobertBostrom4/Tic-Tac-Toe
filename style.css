@@ -49,3 +49,15 @@ body {
     border-style: solid;
     border-color: black;
 }
+
+button {
+    outline: none;
+    background: transparent;
+    border: 1px solid transparent;
+    border-style: solid;
+    border-color: black;
+}
+
+button:hover {
+    cursor: pointer;
+}
