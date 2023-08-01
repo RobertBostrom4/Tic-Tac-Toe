@@ -70,3 +70,9 @@ button:hover {
     width: 50vw;
     height: 50vh;
 }
+
+.footer-section {
+    display: flex;
+    justify-content: center;
+    height: 5vh;
+}
