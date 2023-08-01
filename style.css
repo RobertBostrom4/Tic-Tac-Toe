@@ -8,3 +8,44 @@ body {
     display: flex;
     justify-content: center;
 }
+
+.gameboard-section {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    background-color: purple;
+    height: 40vh;
+}
+
+.gameboard-section button {
+    font-size: 5rem;
+}
+
+.header-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    height: 10vh;
+    align-items: center;
+}
+
+.header-section button {
+    width: 25%;
+    height: 30%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.header-section button:focus {
+    border-width: 3px;
+    border-radius: 5%;
+}
+
+.header-section button:focus {
+    border-style: solid;
+    border-color: black;
+}
