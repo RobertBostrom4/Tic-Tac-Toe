@@ -76,3 +76,7 @@ button:hover {
     justify-content: center;
     height: 5vh;
 }
+
+.reset-button {
+    width: 100%;
+}
